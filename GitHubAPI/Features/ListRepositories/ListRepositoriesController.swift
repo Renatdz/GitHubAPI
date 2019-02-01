@@ -35,6 +35,8 @@ extension ListRespositoriesController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Repositórios"
+        
         listRepositoriesPresenter.setView(self)
     }
 }

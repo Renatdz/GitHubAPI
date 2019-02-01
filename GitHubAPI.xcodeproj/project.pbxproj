@@ -20,6 +20,16 @@
 		A5A0CE0F2204C13F0087F634 /* NSLayoutConstraint+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE0E2204C13F0087F634 /* NSLayoutConstraint+Util.swift */; };
 		A5A0CE132204CFBC0087F634 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE122204CFBC0087F634 /* AppCoordinator.swift */; };
 		A5A0CE162204D1290087F634 /* RepositoriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE152204D1290087F634 /* RepositoriesCoordinator.swift */; };
+		A5A0CE192204D4E40087F634 /* APIClientBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE182204D4E40087F634 /* APIClientBuilder.swift */; };
+		A5A0CE1C2204D5390087F634 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE1B2204D5390087F634 /* Endpoint.swift */; };
+		A5A0CE1E2204D63B0087F634 /* PrintableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE1D2204D63B0087F634 /* PrintableError.swift */; };
+		A5A0CE202204D7190087F634 /* RequestAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE1F2204D7190087F634 /* RequestAPIClient.swift */; };
+		A5A0CE222204D84E0087F634 /* ErrorHandlerAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE212204D84E0087F634 /* ErrorHandlerAPIClient.swift */; };
+		A5A0CE242204D9FC0087F634 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE232204D9FC0087F634 /* ErrorHandler.swift */; };
+		A5A0CE262204DA980087F634 /* Error+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE252204DA980087F634 /* Error+Util.swift */; };
+		A5A0CE282204DCD30087F634 /* ConnectableAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE272204DCD30087F634 /* ConnectableAPIClient.swift */; };
+		A5A0CE2A2204DCFD0087F634 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE292204DCFD0087F634 /* Connectivity.swift */; };
+		A5A0CE2E2204DDC40087F634 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE2D2204DDC40087F634 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +69,16 @@
 		A5A0CE0E2204C13F0087F634 /* NSLayoutConstraint+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Util.swift"; sourceTree = "<group>"; };
 		A5A0CE122204CFBC0087F634 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A5A0CE152204D1290087F634 /* RepositoriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesCoordinator.swift; sourceTree = "<group>"; };
+		A5A0CE182204D4E40087F634 /* APIClientBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientBuilder.swift; sourceTree = "<group>"; };
+		A5A0CE1B2204D5390087F634 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		A5A0CE1D2204D63B0087F634 /* PrintableError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintableError.swift; sourceTree = "<group>"; };
+		A5A0CE1F2204D7190087F634 /* RequestAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAPIClient.swift; sourceTree = "<group>"; };
+		A5A0CE212204D84E0087F634 /* ErrorHandlerAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerAPIClient.swift; sourceTree = "<group>"; };
+		A5A0CE232204D9FC0087F634 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		A5A0CE252204DA980087F634 /* Error+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Util.swift"; sourceTree = "<group>"; };
+		A5A0CE272204DCD30087F634 /* ConnectableAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectableAPIClient.swift; sourceTree = "<group>"; };
+		A5A0CE292204DCFD0087F634 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		A5A0CE2D2204DDC40087F634 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A0CE2E2204DDC40087F634 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +114,7 @@
 				A559587C22021DE9009EB57C /* GitHubAPITests */,
 				A559588722021DE9009EB57C /* GitHubAPIUITests */,
 				A559586622021DE7009EB57C /* Products */,
+				A5A0CE2C2204DDC40087F634 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,7 +136,7 @@
 				A5A0CE142204D1000087F634 /* Coordinators */,
 				A5A0CDF422039DEC0087F634 /* Features */,
 				A5A0CDF722039E460087F634 /* Models */,
-				A5A0CDF822039E530087F634 /* Networking */,
+				A5A0CDF822039E530087F634 /* Network */,
 				A5A0CE012204BFD70087F634 /* Utils */,
 				A5A0CDF322039C080087F634 /* Resources */,
 			);
@@ -174,11 +196,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A5A0CDF822039E530087F634 /* Networking */ = {
+		A5A0CDF822039E530087F634 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A5A0CE172204D4D20087F634 /* APIClient */,
+				A5A0CE1A2204D5250087F634 /* Endpoints */,
+				A5A0CE232204D9FC0087F634 /* ErrorHandler.swift */,
+				A5A0CE292204DCFD0087F634 /* Connectivity.swift */,
 			);
-			path = Networking;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		A5A0CE012204BFD70087F634 /* Utils */ = {
@@ -186,6 +212,8 @@
 			children = (
 				A5A0CE0C2204C00B0087F634 /* CodableView.swift */,
 				A5A0CE0E2204C13F0087F634 /* NSLayoutConstraint+Util.swift */,
+				A5A0CE1D2204D63B0087F634 /* PrintableError.swift */,
+				A5A0CE252204DA980087F634 /* Error+Util.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -199,6 +227,33 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		A5A0CE172204D4D20087F634 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				A5A0CE182204D4E40087F634 /* APIClientBuilder.swift */,
+				A5A0CE1F2204D7190087F634 /* RequestAPIClient.swift */,
+				A5A0CE212204D84E0087F634 /* ErrorHandlerAPIClient.swift */,
+				A5A0CE272204DCD30087F634 /* ConnectableAPIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		A5A0CE1A2204D5250087F634 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				A5A0CE1B2204D5390087F634 /* Endpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		A5A0CE2C2204DDC40087F634 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5A0CE2D2204DDC40087F634 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -209,6 +264,7 @@
 				A559586122021DE7009EB57C /* Sources */,
 				A559586222021DE7009EB57C /* Frameworks */,
 				A559586322021DE7009EB57C /* Resources */,
+				A5A0CE2B2204DDA20087F634 /* Carthage copy */,
 			);
 			buildRules = (
 			);
@@ -324,6 +380,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A5A0CE2B2204DDA20087F634 /* Carthage copy */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = "Carthage copy";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A559586122021DE7009EB57C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -331,12 +410,21 @@
 			files = (
 				A5A0CE162204D1290087F634 /* RepositoriesCoordinator.swift in Sources */,
 				A5A0CDFE22039F360087F634 /* ListRepositoriesView.swift in Sources */,
+				A5A0CE2A2204DCFD0087F634 /* Connectivity.swift in Sources */,
+				A5A0CE1E2204D63B0087F634 /* PrintableError.swift in Sources */,
+				A5A0CE222204D84E0087F634 /* ErrorHandlerAPIClient.swift in Sources */,
+				A5A0CE202204D7190087F634 /* RequestAPIClient.swift in Sources */,
 				A5A0CE0022039FEA0087F634 /* ListRepositoriesViewProtocol.swift in Sources */,
 				A5A0CDFC22039F280087F634 /* ListRepositoriesController.swift in Sources */,
 				A5A0CE0D2204C00B0087F634 /* CodableView.swift in Sources */,
 				A5A0CE132204CFBC0087F634 /* AppCoordinator.swift in Sources */,
 				A5A0CE0F2204C13F0087F634 /* NSLayoutConstraint+Util.swift in Sources */,
+				A5A0CE192204D4E40087F634 /* APIClientBuilder.swift in Sources */,
 				A5A0CDFA22039F1C0087F634 /* ListRepositoriesPresenter.swift in Sources */,
+				A5A0CE242204D9FC0087F634 /* ErrorHandler.swift in Sources */,
+				A5A0CE1C2204D5390087F634 /* Endpoint.swift in Sources */,
+				A5A0CE282204DCD30087F634 /* ConnectableAPIClient.swift in Sources */,
+				A5A0CE262204DA980087F634 /* Error+Util.swift in Sources */,
 				A559586922021DE7009EB57C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +594,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KWEMDK92F4;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = GitHubAPI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -525,6 +614,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KWEMDK92F4;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = GitHubAPI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

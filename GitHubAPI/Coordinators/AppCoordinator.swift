@@ -17,6 +17,12 @@ public protocol Coordinator: class {
 final class AppCoordinator {
     
     private let navigationController: UINavigationController = UINavigationController()
+    private let baseURL: URL = URL(string: "https://api.github.com")!
+    
+    private lazy var apiClient: APIClient = APIClientBuilder(baseURL: self.baseURL)
+        .withErrorHandler()
+        .connectivity()
+        .build()
     
     func start() -> UIViewController {
         let repositoriesCoordinator: RepositoriesCoordinator = RepositoriesCoordinator(navigationController: navigationController)
