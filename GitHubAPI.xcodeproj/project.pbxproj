@@ -18,6 +18,8 @@
 		A5A0CE0022039FEA0087F634 /* ListRepositoriesViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CDFF22039FEA0087F634 /* ListRepositoriesViewProtocol.swift */; };
 		A5A0CE0D2204C00B0087F634 /* CodableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE0C2204C00B0087F634 /* CodableView.swift */; };
 		A5A0CE0F2204C13F0087F634 /* NSLayoutConstraint+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE0E2204C13F0087F634 /* NSLayoutConstraint+Util.swift */; };
+		A5A0CE132204CFBC0087F634 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE122204CFBC0087F634 /* AppCoordinator.swift */; };
+		A5A0CE162204D1290087F634 /* RepositoriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE152204D1290087F634 /* RepositoriesCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		A5A0CDFF22039FEA0087F634 /* ListRepositoriesViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositoriesViewProtocol.swift; sourceTree = "<group>"; };
 		A5A0CE0C2204C00B0087F634 /* CodableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableView.swift; sourceTree = "<group>"; };
 		A5A0CE0E2204C13F0087F634 /* NSLayoutConstraint+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Util.swift"; sourceTree = "<group>"; };
+		A5A0CE122204CFBC0087F634 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A5A0CE152204D1290087F634 /* RepositoriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			children = (
 				A559587422021DE9009EB57C /* Info.plist */,
 				A559586822021DE7009EB57C /* AppDelegate.swift */,
+				A5A0CE142204D1000087F634 /* Coordinators */,
 				A5A0CDF422039DEC0087F634 /* Features */,
 				A5A0CDF722039E460087F634 /* Models */,
 				A5A0CDF822039E530087F634 /* Networking */,
@@ -183,6 +188,15 @@
 				A5A0CE0E2204C13F0087F634 /* NSLayoutConstraint+Util.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		A5A0CE142204D1000087F634 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				A5A0CE122204CFBC0087F634 /* AppCoordinator.swift */,
+				A5A0CE152204D1290087F634 /* RepositoriesCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,10 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A0CE162204D1290087F634 /* RepositoriesCoordinator.swift in Sources */,
 				A5A0CDFE22039F360087F634 /* ListRepositoriesView.swift in Sources */,
 				A5A0CE0022039FEA0087F634 /* ListRepositoriesViewProtocol.swift in Sources */,
 				A5A0CDFC22039F280087F634 /* ListRepositoriesController.swift in Sources */,
 				A5A0CE0D2204C00B0087F634 /* CodableView.swift in Sources */,
+				A5A0CE132204CFBC0087F634 /* AppCoordinator.swift in Sources */,
 				A5A0CE0F2204C13F0087F634 /* NSLayoutConstraint+Util.swift in Sources */,
 				A5A0CDFA22039F1C0087F634 /* ListRepositoriesPresenter.swift in Sources */,
 				A559586922021DE7009EB57C /* AppDelegate.swift in Sources */,
