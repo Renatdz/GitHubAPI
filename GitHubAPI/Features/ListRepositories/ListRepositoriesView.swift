@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import Reusable
 
 final class ListRepositoriesView: UIView {
     
-    private lazy var label: UILabel = {
-        let label = UILabel(frame: .zero)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
-        return label
+    private(set) lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
+        tableView.separatorStyle = .none
+        tableView.register(cellType: RepositoryCell.self)
+        return tableView
     }()
     
     override init(frame: CGRect = .zero) {
@@ -30,16 +34,17 @@ final class ListRepositoriesView: UIView {
 extension ListRepositoriesView: CodableView {
     
     func buildHierarchy() {
-        addSubview(label)
+        addSubview(tableView)
     }
     
     func buildConstraints() {
-        label.centerXConstraint(parentView: self)
-        label.centerYConstraint(parentView: self)
+        tableView.safeAreaTop(safeAreaView: self, statusBar: true)
+        tableView.leftConstraint(parentView: self)
+        tableView.rightConstraint(parentView: self)
+        tableView.bottomConstraint(parentView: self)
     }
 
     func setup() {
         backgroundColor = .white
-        label.text = "Hello World!"
     }
 }

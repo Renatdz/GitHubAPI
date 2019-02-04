@@ -36,6 +36,9 @@
 		A5A0CE372208B19C0087F634 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE362208B19C0087F634 /* Repository.swift */; };
 		A5A0CE392208B6920087F634 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE382208B6920087F634 /* Owner.swift */; };
 		A5A0CE3B2208BD860087F634 /* RepositoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE3A2208BD860087F634 /* RepositoryResult.swift */; };
+		A5A0CE3D2208DFA20087F634 /* ListRepositoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE3C2208DFA20087F634 /* ListRepositoriesDataSource.swift */; };
+		A5A0CE3F2208E0960087F634 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE3E2208E0960087F634 /* RepositoryCell.swift */; };
+		A5A0CE412208E3F00087F634 /* Reusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE402208E3F00087F634 /* Reusable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		A5A0CE362208B19C0087F634 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		A5A0CE382208B6920087F634 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		A5A0CE3A2208BD860087F634 /* RepositoryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryResult.swift; sourceTree = "<group>"; };
+		A5A0CE3C2208DFA20087F634 /* ListRepositoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositoriesDataSource.swift; sourceTree = "<group>"; };
+		A5A0CE3E2208E0960087F634 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		A5A0CE402208E3F00087F634 /* Reusable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reusable.framework; path = Carthage/Build/iOS/Reusable.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A0CE412208E3F00087F634 /* Reusable.framework in Frameworks */,
 				A5A0CE2E2204DDC40087F634 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,8 +200,10 @@
 		A5A0CDF522039DF60087F634 /* ListRepositories */ = {
 			isa = PBXGroup;
 			children = (
-				A5A0CDFD22039F360087F634 /* ListRepositoriesView.swift */,
 				A5A0CDFF22039FEA0087F634 /* ListRepositoriesViewProtocol.swift */,
+				A5A0CDFD22039F360087F634 /* ListRepositoriesView.swift */,
+				A5A0CE3E2208E0960087F634 /* RepositoryCell.swift */,
+				A5A0CE3C2208DFA20087F634 /* ListRepositoriesDataSource.swift */,
 				A5A0CDFB22039F280087F634 /* ListRepositoriesController.swift */,
 				A5A0CDF922039F1C0087F634 /* ListRepositoriesPresenter.swift */,
 			);
@@ -266,6 +275,7 @@
 		A5A0CE2C2204DDC40087F634 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5A0CE402208E3F00087F634 /* Reusable.framework */,
 				A5A0CE2D2204DDC40087F634 /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -416,12 +426,14 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Reusable.framework",
 			);
 			name = "Carthage copy";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Reusable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -455,7 +467,9 @@
 				A5A0CE1C2204D5390087F634 /* Endpoint.swift in Sources */,
 				A5A0CE282204DCD30087F634 /* ConnectableAPIClient.swift in Sources */,
 				A5A0CE332208AE4B0087F634 /* RepositoriesService.swift in Sources */,
+				A5A0CE3F2208E0960087F634 /* RepositoryCell.swift in Sources */,
 				A5A0CE352208AFE20087F634 /* RepositoriesEndpoint.swift in Sources */,
+				A5A0CE3D2208DFA20087F634 /* ListRepositoriesDataSource.swift in Sources */,
 				A5A0CE262204DA980087F634 /* Error+Util.swift in Sources */,
 				A559586922021DE7009EB57C /* AppDelegate.swift in Sources */,
 			);

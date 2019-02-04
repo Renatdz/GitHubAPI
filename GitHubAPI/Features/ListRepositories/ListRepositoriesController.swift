@@ -13,6 +13,7 @@ final class ListRespositoriesController: UIViewController {
     private let listRepositoriesView: ListRepositoriesView = ListRepositoriesView()
     private let repositoriesService: RepositoriesService
     private let listRepositoriesPresenter: ListRespositoriesPresenter
+    private var listDataSource: ListRepositoriesDataSource?
     
     init(service: RepositoriesService, presenter: ListRespositoriesPresenter = ListRespositoriesPresenter()) {
         repositoriesService = service
@@ -59,7 +60,9 @@ extension ListRespositoriesController: ListRepositoriesViewProtocol {
     }
     
     func set(_ repositories: [Repository]) {
-        
+        listDataSource = ListRepositoriesDataSource(repositories: repositories)
+        listRepositoriesView.tableView.dataSource = listDataSource
+        listRepositoriesView.tableView.reloadData()
     }
     
     func showEmptyView() {
