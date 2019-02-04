@@ -24,8 +24,17 @@ final class AppCoordinator {
         .connectivity()
         .build()
     
+    private lazy var serviceFactory: ServiceFactory = APIServiceFactory(apiClient: apiClient)
+    
+    init(serviceFactory: ServiceFactory? = nil) {
+        if let serviceFactory = serviceFactory {
+            self.serviceFactory = serviceFactory
+        }
+    }
+    
     func start() -> UIViewController {
-        let repositoriesCoordinator: RepositoriesCoordinator = RepositoriesCoordinator(navigationController: navigationController)
+        let repositoriesCoordinator: RepositoriesCoordinator = RepositoriesCoordinator(service: serviceFactory.getRepositoriesService(),
+                                                                                       navigationController: navigationController)
         repositoriesCoordinator.start()
         
         return navigationController

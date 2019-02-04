@@ -10,6 +10,6 @@ protocol ListRepositoriesViewProtocol: class {
     func showLoading()
     func hideLoading()
     func showError(message: String)
-    func set(_ repositories: [String])
+    func set(_ repositories: [Repository])
     func showEmptyView()
 }

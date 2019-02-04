@@ -30,6 +30,12 @@
 		A5A0CE282204DCD30087F634 /* ConnectableAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE272204DCD30087F634 /* ConnectableAPIClient.swift */; };
 		A5A0CE2A2204DCFD0087F634 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE292204DCFD0087F634 /* Connectivity.swift */; };
 		A5A0CE2E2204DDC40087F634 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE2D2204DDC40087F634 /* Alamofire.framework */; };
+		A5A0CE312208AD1A0087F634 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE302208AD1A0087F634 /* ServiceFactory.swift */; };
+		A5A0CE332208AE4B0087F634 /* RepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE322208AE4B0087F634 /* RepositoriesService.swift */; };
+		A5A0CE352208AFE20087F634 /* RepositoriesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE342208AFE20087F634 /* RepositoriesEndpoint.swift */; };
+		A5A0CE372208B19C0087F634 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE362208B19C0087F634 /* Repository.swift */; };
+		A5A0CE392208B6920087F634 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE382208B6920087F634 /* Owner.swift */; };
+		A5A0CE3B2208BD860087F634 /* RepositoryResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE3A2208BD860087F634 /* RepositoryResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,12 @@
 		A5A0CE272204DCD30087F634 /* ConnectableAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectableAPIClient.swift; sourceTree = "<group>"; };
 		A5A0CE292204DCFD0087F634 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		A5A0CE2D2204DDC40087F634 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		A5A0CE302208AD1A0087F634 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		A5A0CE322208AE4B0087F634 /* RepositoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesService.swift; sourceTree = "<group>"; };
+		A5A0CE342208AFE20087F634 /* RepositoriesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesEndpoint.swift; sourceTree = "<group>"; };
+		A5A0CE362208B19C0087F634 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		A5A0CE382208B6920087F634 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		A5A0CE3A2208BD860087F634 /* RepositoryResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +204,9 @@
 		A5A0CDF722039E460087F634 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A5A0CE3A2208BD860087F634 /* RepositoryResult.swift */,
+				A5A0CE362208B19C0087F634 /* Repository.swift */,
+				A5A0CE382208B6920087F634 /* Owner.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,6 +216,7 @@
 			children = (
 				A5A0CE172204D4D20087F634 /* APIClient */,
 				A5A0CE1A2204D5250087F634 /* Endpoints */,
+				A5A0CE2F2208ACF60087F634 /* Services */,
 				A5A0CE232204D9FC0087F634 /* ErrorHandler.swift */,
 				A5A0CE292204DCFD0087F634 /* Connectivity.swift */,
 			);
@@ -242,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				A5A0CE1B2204D5390087F634 /* Endpoint.swift */,
+				A5A0CE342208AFE20087F634 /* RepositoriesEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -252,6 +269,15 @@
 				A5A0CE2D2204DDC40087F634 /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5A0CE2F2208ACF60087F634 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A5A0CE302208AD1A0087F634 /* ServiceFactory.swift */,
+				A5A0CE322208AE4B0087F634 /* RepositoriesService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,7 +438,10 @@
 				A5A0CDFE22039F360087F634 /* ListRepositoriesView.swift in Sources */,
 				A5A0CE2A2204DCFD0087F634 /* Connectivity.swift in Sources */,
 				A5A0CE1E2204D63B0087F634 /* PrintableError.swift in Sources */,
+				A5A0CE3B2208BD860087F634 /* RepositoryResult.swift in Sources */,
+				A5A0CE392208B6920087F634 /* Owner.swift in Sources */,
 				A5A0CE222204D84E0087F634 /* ErrorHandlerAPIClient.swift in Sources */,
+				A5A0CE372208B19C0087F634 /* Repository.swift in Sources */,
 				A5A0CE202204D7190087F634 /* RequestAPIClient.swift in Sources */,
 				A5A0CE0022039FEA0087F634 /* ListRepositoriesViewProtocol.swift in Sources */,
 				A5A0CDFC22039F280087F634 /* ListRepositoriesController.swift in Sources */,
@@ -421,9 +450,12 @@
 				A5A0CE0F2204C13F0087F634 /* NSLayoutConstraint+Util.swift in Sources */,
 				A5A0CE192204D4E40087F634 /* APIClientBuilder.swift in Sources */,
 				A5A0CDFA22039F1C0087F634 /* ListRepositoriesPresenter.swift in Sources */,
+				A5A0CE312208AD1A0087F634 /* ServiceFactory.swift in Sources */,
 				A5A0CE242204D9FC0087F634 /* ErrorHandler.swift in Sources */,
 				A5A0CE1C2204D5390087F634 /* Endpoint.swift in Sources */,
 				A5A0CE282204DCD30087F634 /* ConnectableAPIClient.swift in Sources */,
+				A5A0CE332208AE4B0087F634 /* RepositoriesService.swift in Sources */,
+				A5A0CE352208AFE20087F634 /* RepositoriesEndpoint.swift in Sources */,
 				A5A0CE262204DA980087F634 /* Error+Util.swift in Sources */,
 				A559586922021DE7009EB57C /* AppDelegate.swift in Sources */,
 			);

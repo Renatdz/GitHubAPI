@@ -11,9 +11,11 @@ import UIKit
 final class ListRespositoriesController: UIViewController {
     
     private let listRepositoriesView: ListRepositoriesView = ListRepositoriesView()
+    private let repositoriesService: RepositoriesService
     private let listRepositoriesPresenter: ListRespositoriesPresenter
     
-    init(presenter: ListRespositoriesPresenter = ListRespositoriesPresenter()) {
+    init(service: RepositoriesService, presenter: ListRespositoriesPresenter = ListRespositoriesPresenter()) {
+        repositoriesService = service
         listRepositoriesPresenter = presenter
         
         super.init(nibName: nil, bundle: nil)
@@ -38,6 +40,7 @@ extension ListRespositoriesController {
         title = "Repositórios"
         
         listRepositoriesPresenter.setView(self)
+        listRepositoriesPresenter.fetchRepositories(from: repositoriesService)
     }
 }
 
@@ -55,7 +58,7 @@ extension ListRespositoriesController: ListRepositoriesViewProtocol {
         
     }
     
-    func set(_ repositories: [String]) {
+    func set(_ repositories: [Repository]) {
         
     }
     

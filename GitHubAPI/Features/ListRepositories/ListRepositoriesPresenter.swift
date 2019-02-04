@@ -15,4 +15,24 @@ final class ListRespositoriesPresenter {
     func setView(_ view: ListRepositoriesViewProtocol) {
         listRepositoriesView = view
     }
+    
+    func fetchRepositories(from service: RepositoriesService) {
+        listRepositoriesView?.showLoading()
+        
+        service.fetchRepositories(language: "swift", sort: "stars") { [weak self] result in
+            self?.listRepositoriesView?.hideLoading()
+            
+            switch result {
+            case let .success(repositories):
+                guard !repositories.isEmpty else {
+                    self?.listRepositoriesView?.showEmptyView(); return
+                }
+                
+                self?.listRepositoriesView?.set(repositories)
+                
+            case let .failure(error):
+                self?.listRepositoriesView?.showError(message: error.localizedDescription)
+            }
+        }
+    }
 }

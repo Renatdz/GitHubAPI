@@ -21,7 +21,10 @@ final class RequestAPIClient: APIClient {
     }
     
     func request(_ endpoint: Endpoint, completion: @escaping (Result<Data>) -> Void) {
-        let fullPath = baseURL.appendingPathComponent(endpoint.path)
+        guard let fullPath = URL(string: baseURL.absoluteString + endpoint.path) else {
+            return completion(.failure(GenericError.unknown))
+        }
+        
         let method = Alamofire.HTTPMethod(rawValue: endpoint.method.rawValue)!
         let parameters = endpoint.parameters
         let headers = endpoint.headers
