@@ -16,6 +16,10 @@ final class ListRepositoriesDataSource: NSObject {
     func set(_ repositories: [Repository]) {
         self.repositories.append(contentsOf: repositories)
     }
+    
+    func clear() {
+        self.repositories.removeAll()
+    }
 }
 
 extension ListRepositoriesDataSource: UITableViewDataSource {

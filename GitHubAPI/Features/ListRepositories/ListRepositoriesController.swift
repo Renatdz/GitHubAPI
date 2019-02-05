@@ -33,6 +33,7 @@ extension ListRespositoriesController {
         super.loadView()
         
         listRepositoriesView = ListRepositoriesView(tryAgainDelegate: self)
+        listRepositoriesView.delegate = self
         view = listRepositoriesView
     }
     
@@ -66,6 +67,13 @@ extension ListRespositoriesController: ListRepositoriesViewProtocol {
     
     func showEmptyView() {
         listRepositoriesView.showEmptyView()
+    }
+}
+
+extension ListRespositoriesController: ListRepositoriesViewDelegate {
+    
+    func pullToRefresh() {
+        listRepositoriesPresenter.fetchRepositories(from: repositoriesService)
     }
 }
 

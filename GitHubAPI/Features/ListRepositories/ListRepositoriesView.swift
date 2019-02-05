@@ -9,10 +9,23 @@
 import UIKit
 import Reusable
 
+protocol ListRepositoriesViewDelegate: class {
+    func pullToRefresh()
+}
+
 final class ListRepositoriesView: UIView {
     
     private var listDataSource: ListRepositoriesDataSource = ListRepositoriesDataSource()
+    private var isPullToRefreshCalled: Bool = false
     private weak var tryAgainDelegate: ErrorViewDelegate?
+    public weak var delegate: ListRepositoriesViewDelegate?
+    
+    private var refreshControl: UIRefreshControl {
+        let control = UIRefreshControl(frame: .zero)
+        control.attributedTitle = NSAttributedString(string: "Fetching repositories...")
+        control.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
+        return control
+    }
     
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -51,6 +64,10 @@ final class ListRepositoriesView: UIView {
 extension ListRepositoriesView {
     
     func show(repositories: [Repository]) {
+        if isPullToRefreshCalled {
+            listDataSource.clear()
+        }
+        
         listDataSource.set(repositories)
         tableView.reloadData()
         tableView.isHidden = false
@@ -58,12 +75,17 @@ extension ListRepositoriesView {
     }
     
     func showLoading() {
+        guard !isPullToRefreshCalled else {
+            return
+        }
+        
         loading.startAnimating()
         loading.isHidden = false
         errorView.isHidden = true
     }
     
     func hideLoading() {
+        tableView.refreshControl?.endRefreshing()
         loading.stopAnimating()
         loading.isHidden = true
     }
@@ -78,6 +100,12 @@ extension ListRepositoriesView {
         errorView.set(message: message)
         errorView.isHidden = false
         tableView.isHidden = true
+    }
+    
+    @objc
+    func pullToRefresh() {
+        isPullToRefreshCalled = true
+        delegate?.pullToRefresh()
     }
 }
 
@@ -104,5 +132,6 @@ extension ListRepositoriesView: CodableView {
 
     func setup() {
         backgroundColor = .white
+        tableView.refreshControl = refreshControl
     }
 }
