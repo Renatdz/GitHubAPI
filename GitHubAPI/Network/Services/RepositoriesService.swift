@@ -19,16 +19,16 @@ extension RepositoriesService {
 }
 
 public final class DefaultRepositoriesService: RepositoriesService {
-    
+
     private let apiClient: APIClient
-    
+
     init(apiClient: APIClient) {
         self.apiClient = apiClient
     }
-    
+
     func fetchRepositories(language: String, sort: String, page: Int, completion: @escaping (Result<[Repository]>) -> Void) {
         let endpoint = RepositoriesEndpoint(language: language, sort: sort, page: page)
-        
+
         apiClient.request(endpoint) { result in
             switch result {
             case let .success(data):
@@ -37,7 +37,7 @@ public final class DefaultRepositoriesService: RepositoriesService {
                 } else {
                     completion(.failure(GenericError.parse))
                 }
-                
+
             case let .failure(error):
                 completion(.failure(error))
             }

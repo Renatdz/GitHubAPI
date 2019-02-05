@@ -10,7 +10,7 @@ import UIKit
 import Reusable
 
 final class RepositoryCell: UITableViewCell {
-    
+
     lazy var label: UILabel = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -18,18 +18,18 @@ final class RepositoryCell: UITableViewCell {
         label.textColor = .black
         return label
     }()
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
 extension RepositoryCell {
-    
+
     func setup(with repository: Repository) {
         buildCodableView()
     }
@@ -38,17 +38,17 @@ extension RepositoryCell {
 extension RepositoryCell: Reusable { }
 
 extension RepositoryCell: CodableView {
-    
+
     func buildHierarchy() {
         contentView.addSubview(label)
     }
-    
+
     func buildConstraints() {
         label.centerXConstraint(parentView: contentView)
         label.centerYConstraint(parentView: contentView)
     }
-    
+
     func setup() {
-        
+
     }
 }

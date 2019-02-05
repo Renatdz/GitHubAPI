@@ -6,8 +6,10 @@
 //  Copyright © 2019 Renato Mendes. All rights reserved.
 //
 
+// swiftlint:disable identifier_name
+
 struct Repository: Codable {
-    
+
     private(set) var id: Int
     private(set) var name: String
     private(set) var fullName: String
@@ -15,7 +17,7 @@ struct Repository: Codable {
     private(set) var stars: Int
     private(set) var watchers: Int
     private(set) var forks: Int
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case name
@@ -25,7 +27,7 @@ struct Repository: Codable {
         case watchers = "watchers_count"
         case forks
     }
-    
+
     init(id: Int, name: String, fullName: String, owner: Owner, stars: Int, watchers: Int, forks: Int) {
         self.id = id
         self.name = name

@@ -1,0 +1,72 @@
+opt_in_rules:
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - discouraged_object_literal
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - file_length
+  - first_where
+  - force_cast
+  - force_try
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+  - joined_default_parameter
+  - multiline_parameters
+  - operator_usage_whitespace
+  - overridden_super_call
+  - prefixed_toplevel_constant
+  - private_action
+  - private_outlet
+  - prohibited_super_call
+  - redundant_nil_coalescing
+  - switch_case_on_newline
+  - trailing_closure
+  - unneeded_parentheses_in_closure_argument
+  - vertical_parameter_alignment_on_call
+  - yoda_condition
+
+attributes:
+  always_on_line_above:
+    - "@_exported"
+    - "@UIApplicationMain"
+    - "@objc"
+    - "@nonobjc"
+    - "@available"
+    - "@discardableResult"
+  always_on_same_line:
+    - "@IBOutlet"
+    - "@IBAction"
+    - "@NSManaged"
+    - "@testable"
+
+force_cast:
+  severity: warning
+
+force_try:
+  severity: warning
+
+function_body_length:
+  warning: 50
+  error: 60
+
+file_length:
+  warning: 500
+  error: 1200
+
+line_length:
+  warning: 150
+  error: 160
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+
+custom_rules:
+  quickspec_class_name:
+    name: "Invalid Test Class Name"
+    regex: "class\\s+(.*)[^Tests]:\\s+QuickSpec"
+    message: "A test class name must end with 'Tests'"
+    severity: error
+
+reporter: "xcode"

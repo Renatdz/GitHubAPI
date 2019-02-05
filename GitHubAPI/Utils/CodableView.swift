@@ -16,12 +16,12 @@ public protocol CodableView: class {
 }
 
 public extension CodableView {
-    
+
     public func buildCodableView() {
         buildHierarchy()
         buildConstraints()
         setup()
     }
-    
+
     public func setup() { }
 }

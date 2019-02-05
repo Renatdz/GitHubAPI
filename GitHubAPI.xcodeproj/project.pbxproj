@@ -10,8 +10,6 @@
 		A559586922021DE7009EB57C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A559586822021DE7009EB57C /* AppDelegate.swift */; };
 		A559587022021DE9009EB57C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A559586F22021DE9009EB57C /* Assets.xcassets */; };
 		A559587322021DE9009EB57C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A559587122021DE9009EB57C /* LaunchScreen.storyboard */; };
-		A559587E22021DE9009EB57C /* GitHubAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A559587D22021DE9009EB57C /* GitHubAPITests.swift */; };
-		A559588922021DE9009EB57C /* GitHubAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A559588822021DE9009EB57C /* GitHubAPIUITests.swift */; };
 		A5A0CDFA22039F1C0087F634 /* ListRepositoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CDF922039F1C0087F634 /* ListRepositoriesPresenter.swift */; };
 		A5A0CDFC22039F280087F634 /* ListRepositoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CDFB22039F280087F634 /* ListRepositoriesController.swift */; };
 		A5A0CDFE22039F360087F634 /* ListRepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CDFD22039F360087F634 /* ListRepositoriesView.swift */; };
@@ -73,10 +71,8 @@
 		A559587222021DE9009EB57C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A559587422021DE9009EB57C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A559587922021DE9009EB57C /* GitHubAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A559587D22021DE9009EB57C /* GitHubAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPITests.swift; sourceTree = "<group>"; };
 		A559587F22021DE9009EB57C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A559588422021DE9009EB57C /* GitHubAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A559588822021DE9009EB57C /* GitHubAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIUITests.swift; sourceTree = "<group>"; };
 		A559588A22021DE9009EB57C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5A0CDF922039F1C0087F634 /* ListRepositoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositoriesPresenter.swift; sourceTree = "<group>"; };
 		A5A0CDFB22039F280087F634 /* ListRepositoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositoriesController.swift; sourceTree = "<group>"; };
@@ -189,7 +185,6 @@
 		A559587C22021DE9009EB57C /* GitHubAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				A559587D22021DE9009EB57C /* GitHubAPITests.swift */,
 				A559587F22021DE9009EB57C /* Info.plist */,
 			);
 			path = GitHubAPITests;
@@ -198,7 +193,6 @@
 		A559588722021DE9009EB57C /* GitHubAPIUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A559588822021DE9009EB57C /* GitHubAPIUITests.swift */,
 				A559588A22021DE9009EB57C /* Info.plist */,
 			);
 			path = GitHubAPIUITests;
@@ -334,6 +328,7 @@
 				A559586222021DE7009EB57C /* Frameworks */,
 				A559586322021DE7009EB57C /* Resources */,
 				A5A0CE2B2204DDA20087F634 /* Carthage copy */,
+				A5A0CE55220A2D2B0087F634 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -505,6 +500,24 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		A5A0CE55220A2D2B0087F634 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -546,7 +559,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A559587E22021DE9009EB57C /* GitHubAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +566,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A559588922021DE9009EB57C /* GitHubAPIUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

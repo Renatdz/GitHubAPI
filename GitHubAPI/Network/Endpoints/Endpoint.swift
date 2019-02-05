@@ -27,6 +27,6 @@ protocol Endpoint {
     var parameters: [String: Any]? { get set }
     var headers: [String: String]? { get set }
     var parameterEncoding: ParameterEncoding { get set }
-    
+
     func errorMessage(with statusCode: Int) -> PrintableError?
 }

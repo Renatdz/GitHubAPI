@@ -17,20 +17,20 @@ protocol ListRepositoriesViewDelegate: class {
 }
 
 final class ListRepositoriesView: UIView {
-    
+
     private var listDataSource: ListRepositoriesDataSource = ListRepositoriesDataSource()
     private var isPullToRefreshCalled: Bool = false
     private var isInfiniteRefreshCalled: Bool = false
     private weak var tryAgainDelegate: ErrorViewDelegate?
     public weak var delegate: ListRepositoriesViewDelegate?
-    
+
     private var refreshControl: UIRefreshControl {
         let control = UIRefreshControl(frame: .zero)
         control.attributedTitle = NSAttributedString(string: "Fetching repositories...")
         control.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
         return control
     }
-    
+
     private(set) lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,68 +41,68 @@ final class ListRepositoriesView: UIView {
         tableView.dataSource = listDataSource
         return tableView
     }()
-    
+
     private(set) lazy var loading: UIActivityIndicatorView = {
         let loading = UIActivityIndicatorView(style: .gray)
         loading.translatesAutoresizingMaskIntoConstraints = false
         return loading
     }()
-    
+
     private(set) lazy var errorView: ErrorView = {
         return ErrorView(delegate: tryAgainDelegate, frame: .zero)
     }()
-    
+
     init(tryAgainDelegate: ErrorViewDelegate? = nil, frame: CGRect = .zero) {
         super.init(frame: frame)
-        
+
         self.tryAgainDelegate = tryAgainDelegate
-        
+
         buildCodableView()
         addInfiniteScroll()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
 extension ListRepositoriesView {
-    
+
     func show(repositories: [Repository]) {
         if isPullToRefreshCalled {
             isPullToRefreshCalled = false
             isInfiniteRefreshCalled = false
             listDataSource.clear()
         }
-        
+
         listDataSource.set(repositories)
         tableView.reloadData()
         tableView.isHidden = false
         errorView.isHidden = true
     }
-    
+
     func showLoading() {
         if isPullToRefreshCalled || isInfiniteRefreshCalled {
             return
         }
-        
+
         loading.startAnimating()
         loading.isHidden = false
         errorView.isHidden = true
     }
-    
+
     func hideLoading() {
         tableView.refreshControl?.endRefreshing()
         loading.stopAnimating()
         loading.isHidden = true
     }
-    
+
     func showEmptyView() {
         errorView.set(message: "Não achamos resultados")
         errorView.isHidden = false
         tableView.isHidden = true
     }
-    
+
     func showErrorView(message: String) {
         if isPullToRefreshCalled || isInfiniteRefreshCalled {
             isPullToRefreshCalled = false
@@ -110,12 +110,12 @@ extension ListRepositoriesView {
             makeToast(message)
             return
         }
-        
+
         errorView.set(message: message)
         errorView.isHidden = false
         tableView.isHidden = true
     }
-    
+
     @objc
     func pullToRefresh() {
         isPullToRefreshCalled = true
@@ -124,15 +124,15 @@ extension ListRepositoriesView {
 }
 
 extension ListRepositoriesView {
-    
+
     func addInfiniteScroll() {
         tableView.addInfiniteScroll { [weak self] tableView in
             self?.isInfiniteRefreshCalled = true
             self?.delegate?.fetchNewRepositories()
-            
+
             tableView.finishInfiniteScroll()
         }
-        
+
         tableView.setShouldShowInfiniteScrollHandler { _ -> Bool in
             return true
         }
@@ -140,22 +140,22 @@ extension ListRepositoriesView {
 }
 
 extension ListRepositoriesView: CodableView {
-    
+
     func buildHierarchy() {
         addSubview(tableView)
         addSubview(loading)
         addSubview(errorView)
     }
-    
+
     func buildConstraints() {
         tableView.safeAreaTop(safeAreaView: self, statusBar: true)
         tableView.leftConstraint(parentView: self)
         tableView.rightConstraint(parentView: self)
         tableView.bottomConstraint(parentView: self)
-        
+
         loading.centerYConstraint(parentView: self)
         loading.centerXConstraint(parentView: self)
-        
+
         errorView.centerYConstraint(parentView: self)
         errorView.centerXConstraint(parentView: self)
     }

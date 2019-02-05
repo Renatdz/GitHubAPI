@@ -8,33 +8,33 @@
 
 public enum GenericError: PrintableError {
     case parse
-    case no_connection
+    case noConnection
     case networking(Int?)
     case unknown
-    
+
     public var localizedDescription: String {
         switch self {
         case .parse:
             return "Erro de sintaxe"
-            
-        case .no_connection:
+
+        case .noConnection:
             return "Parece que você está sem internet.\nVerifique sua conexão."
-            
+
         case .networking:
             return "Erro de conexão"
-            
+
         case .unknown:
             return "Ocorreu um erro inesperado.\nPor favor, tente novamente."
         }
     }
-    
+
     public var title: String {
         return "Erro"
     }
-    
+
     public var imageName: String {
         switch self {
-        case .no_connection:
+        case .noConnection:
             return "error_no_connection"
         default:
             return "error_unknown"

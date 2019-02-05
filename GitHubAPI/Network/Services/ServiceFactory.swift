@@ -11,13 +11,13 @@ protocol ServiceFactory {
 }
 
 public class APIServiceFactory: ServiceFactory {
-    
+
     private let apiClient: APIClient
-    
+
     init(apiClient: APIClient) {
         self.apiClient = apiClient
     }
-    
+
     func getRepositoriesService() -> RepositoriesService {
         return DefaultRepositoriesService(apiClient: apiClient)
     }

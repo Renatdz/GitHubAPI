@@ -14,16 +14,16 @@ protocol Connectable {
 
 public final class Connectivity: Connectable {
     private var reachability: NetworkReachabilityManager?
-    
+
     init(reachability: NetworkReachabilityManager? = NetworkReachabilityManager()) {
         self.reachability = reachability
     }
-    
+
     var isConnectedToInternet: Bool {
         guard let reachability = self.reachability else {
             return false
         }
-        
+
         return reachability.isReachable
     }
 }
