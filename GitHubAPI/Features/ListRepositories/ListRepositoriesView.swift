@@ -9,6 +9,7 @@
 import UIKit
 import Reusable
 import UIScrollView_InfiniteScroll
+import ToastSwiftFramework
 
 protocol ListRepositoriesViewDelegate: class {
     func pullToRefresh()
@@ -103,11 +104,16 @@ extension ListRepositoriesView {
     }
     
     func showErrorView(message: String) {
+        if isPullToRefreshCalled || isInfiniteRefreshCalled {
+            isPullToRefreshCalled = false
+            isInfiniteRefreshCalled = false
+            makeToast(message)
+            return
+        }
+        
         errorView.set(message: message)
         errorView.isHidden = false
         tableView.isHidden = true
-        isPullToRefreshCalled = false
-        isInfiniteRefreshCalled = false
     }
     
     @objc

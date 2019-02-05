@@ -41,6 +41,12 @@
 		A5A0CE412208E3F00087F634 /* Reusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE402208E3F00087F634 /* Reusable.framework */; };
 		A5A0CE432209C5350087F634 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE422209C5350087F634 /* ErrorView.swift */; };
 		A5A0CE45220A0EC50087F634 /* UIScrollView_InfiniteScroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE44220A0EC50087F634 /* UIScrollView_InfiniteScroll.framework */; };
+		A5A0CE48220A29420087F634 /* ToastSwiftFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE46220A29420087F634 /* ToastSwiftFramework.framework */; };
+		A5A0CE49220A29420087F634 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE47220A29420087F634 /* Kingfisher.framework */; };
+		A5A0CE4F220A29610087F634 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE4A220A29600087F634 /* Quick.framework */; };
+		A5A0CE50220A29610087F634 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE4B220A29600087F634 /* FBSnapshotTestCase.framework */; };
+		A5A0CE52220A29610087F634 /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE4D220A29610087F634 /* Nimble_Snapshots.framework */; };
+		A5A0CE53220A29610087F634 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE4E220A29610087F634 /* Nimble.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +107,13 @@
 		A5A0CE402208E3F00087F634 /* Reusable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reusable.framework; path = Carthage/Build/iOS/Reusable.framework; sourceTree = "<group>"; };
 		A5A0CE422209C5350087F634 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		A5A0CE44220A0EC50087F634 /* UIScrollView_InfiniteScroll.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIScrollView_InfiniteScroll.framework; path = Carthage/Build/iOS/UIScrollView_InfiniteScroll.framework; sourceTree = "<group>"; };
+		A5A0CE46220A29420087F634 /* ToastSwiftFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToastSwiftFramework.framework; path = Carthage/Build/iOS/ToastSwiftFramework.framework; sourceTree = "<group>"; };
+		A5A0CE47220A29420087F634 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		A5A0CE4A220A29600087F634 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		A5A0CE4B220A29600087F634 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSnapshotTestCase.framework; path = Carthage/Build/iOS/FBSnapshotTestCase.framework; sourceTree = "<group>"; };
+		A5A0CE4C220A29610087F634 /* 3A7A5B79-E222-3B02-9912-6400A1FB86E1.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; name = "3A7A5B79-E222-3B02-9912-6400A1FB86E1.bcsymbolmap"; path = "Carthage/Build/iOS/3A7A5B79-E222-3B02-9912-6400A1FB86E1.bcsymbolmap"; sourceTree = "<group>"; };
+		A5A0CE4D220A29610087F634 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
+		A5A0CE4E220A29610087F634 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +121,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A0CE48220A29420087F634 /* ToastSwiftFramework.framework in Frameworks */,
+				A5A0CE49220A29420087F634 /* Kingfisher.framework in Frameworks */,
 				A5A0CE45220A0EC50087F634 /* UIScrollView_InfiniteScroll.framework in Frameworks */,
 				A5A0CE412208E3F00087F634 /* Reusable.framework in Frameworks */,
 				A5A0CE2E2204DDC40087F634 /* Alamofire.framework in Frameworks */,
@@ -118,6 +133,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A0CE4F220A29610087F634 /* Quick.framework in Frameworks */,
+				A5A0CE50220A29610087F634 /* FBSnapshotTestCase.framework in Frameworks */,
+				A5A0CE52220A29610087F634 /* Nimble_Snapshots.framework in Frameworks */,
+				A5A0CE53220A29610087F634 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +300,13 @@
 		A5A0CE2C2204DDC40087F634 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5A0CE4C220A29610087F634 /* 3A7A5B79-E222-3B02-9912-6400A1FB86E1.bcsymbolmap */,
+				A5A0CE4B220A29600087F634 /* FBSnapshotTestCase.framework */,
+				A5A0CE4D220A29610087F634 /* Nimble_Snapshots.framework */,
+				A5A0CE4E220A29610087F634 /* Nimble.framework */,
+				A5A0CE4A220A29600087F634 /* Quick.framework */,
+				A5A0CE47220A29420087F634 /* Kingfisher.framework */,
+				A5A0CE46220A29420087F634 /* ToastSwiftFramework.framework */,
 				A5A0CE44220A0EC50087F634 /* UIScrollView_InfiniteScroll.framework */,
 				A5A0CE402208E3F00087F634 /* Reusable.framework */,
 				A5A0CE2D2204DDC40087F634 /* Alamofire.framework */,
@@ -325,6 +351,7 @@
 				A559587522021DE9009EB57C /* Sources */,
 				A559587622021DE9009EB57C /* Frameworks */,
 				A559587722021DE9009EB57C /* Resources */,
+				A5A0CE54220A2B300087F634 /* Carthage copy */,
 			);
 			buildRules = (
 			);
@@ -435,6 +462,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Reusable.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/UIScrollView_InfiniteScroll.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ToastSwiftFramework.framework",
 			);
 			name = "Carthage copy";
 			outputFileListPaths = (
@@ -443,6 +472,34 @@
 				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Reusable.framework",
 				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/UIScrollView_InfiniteScroll.framework",
+				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
+				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ToastSwiftFramework.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		A5A0CE54220A2B300087F634 /* Carthage copy */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FBSnapshotTestCase.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble_Snapshots.framework",
+			);
+			name = "Carthage copy";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Quick.framework",
+				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble.framework",
+				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FBSnapshotTestCase.framework",
+				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nimble_Snapshots.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -691,6 +748,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KWEMDK92F4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitHubAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -712,6 +773,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KWEMDK92F4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GitHubAPITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
