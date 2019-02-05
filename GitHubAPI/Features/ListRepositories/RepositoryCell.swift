@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-class RepositoryCell: UITableViewCell {
+final class RepositoryCell: UITableViewCell {
     
     lazy var label: UILabel = {
         let label = UILabel(frame: .zero)

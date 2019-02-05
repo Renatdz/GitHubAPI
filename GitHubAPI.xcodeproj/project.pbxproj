@@ -39,6 +39,7 @@
 		A5A0CE3D2208DFA20087F634 /* ListRepositoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE3C2208DFA20087F634 /* ListRepositoriesDataSource.swift */; };
 		A5A0CE3F2208E0960087F634 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE3E2208E0960087F634 /* RepositoryCell.swift */; };
 		A5A0CE412208E3F00087F634 /* Reusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE402208E3F00087F634 /* Reusable.framework */; };
+		A5A0CE432209C5350087F634 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE422209C5350087F634 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		A5A0CE3C2208DFA20087F634 /* ListRepositoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositoriesDataSource.swift; sourceTree = "<group>"; };
 		A5A0CE3E2208E0960087F634 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		A5A0CE402208E3F00087F634 /* Reusable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reusable.framework; path = Carthage/Build/iOS/Reusable.framework; sourceTree = "<group>"; };
+		A5A0CE422209C5350087F634 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 				A5A0CE0E2204C13F0087F634 /* NSLayoutConstraint+Util.swift */,
 				A5A0CE1D2204D63B0087F634 /* PrintableError.swift */,
 				A5A0CE252204DA980087F634 /* Error+Util.swift */,
+				A5A0CE422209C5350087F634 /* ErrorView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				A5A0CE372208B19C0087F634 /* Repository.swift in Sources */,
 				A5A0CE202204D7190087F634 /* RequestAPIClient.swift in Sources */,
 				A5A0CE0022039FEA0087F634 /* ListRepositoriesViewProtocol.swift in Sources */,
+				A5A0CE432209C5350087F634 /* ErrorView.swift in Sources */,
 				A5A0CDFC22039F280087F634 /* ListRepositoriesController.swift in Sources */,
 				A5A0CE0D2204C00B0087F634 /* CodableView.swift in Sources */,
 				A5A0CE132204CFBC0087F634 /* AppCoordinator.swift in Sources */,

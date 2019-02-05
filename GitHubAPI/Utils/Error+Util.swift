@@ -18,13 +18,13 @@ public enum GenericError: PrintableError {
             return "Erro de sintaxe"
             
         case .no_connection:
-            return "Parece que você está sem internet. Verifique sua conexão."
+            return "Parece que você está sem internet.\nVerifique sua conexão."
             
         case .networking:
             return "Erro de conexão"
             
         case .unknown:
-            return "Ocorreu um erro inesperado, por favor, tente novamente."
+            return "Ocorreu um erro inesperado.\nPor favor, tente novamente."
         }
     }
     

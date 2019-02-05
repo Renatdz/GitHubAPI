@@ -9,14 +9,12 @@
 import UIKit
 import Reusable
 
-class ListRepositoriesDataSource: NSObject {
+final class ListRepositoriesDataSource: NSObject {
     
     private(set) var repositories: [Repository] = []
     
-    init(repositories: [Repository]) {
-        super.init()
-        
-        self.repositories = repositories
+    func set(_ repositories: [Repository]) {
+        self.repositories.append(contentsOf: repositories)
     }
 }
 

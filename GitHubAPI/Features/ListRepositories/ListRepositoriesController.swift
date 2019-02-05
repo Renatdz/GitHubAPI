@@ -10,13 +10,13 @@ import UIKit
 
 final class ListRespositoriesController: UIViewController {
     
-    private let listRepositoriesView: ListRepositoriesView = ListRepositoriesView()
+    private var listRepositoriesView: ListRepositoriesView = ListRepositoriesView()
     private let repositoriesService: RepositoriesService
     private let listRepositoriesPresenter: ListRespositoriesPresenter
-    private var listDataSource: ListRepositoriesDataSource?
     
     init(service: RepositoriesService, presenter: ListRespositoriesPresenter = ListRespositoriesPresenter()) {
         repositoriesService = service
+        
         listRepositoriesPresenter = presenter
         
         super.init(nibName: nil, bundle: nil)
@@ -32,6 +32,7 @@ extension ListRespositoriesController {
     override func loadView() {
         super.loadView()
         
+        listRepositoriesView = ListRepositoriesView(tryAgainDelegate: self)
         view = listRepositoriesView
     }
     
@@ -48,24 +49,29 @@ extension ListRespositoriesController {
 extension ListRespositoriesController: ListRepositoriesViewProtocol {
     
     func showLoading() {
-        
+        listRepositoriesView.showLoading()
     }
     
     func hideLoading() {
-        
+        listRepositoriesView.hideLoading()
     }
     
     func showError(message: String) {
-        
+        listRepositoriesView.showErrorView(message: message)
     }
     
     func set(_ repositories: [Repository]) {
-        listDataSource = ListRepositoriesDataSource(repositories: repositories)
-        listRepositoriesView.tableView.dataSource = listDataSource
-        listRepositoriesView.tableView.reloadData()
+        listRepositoriesView.show(repositories: repositories)
     }
     
     func showEmptyView() {
-        
+        listRepositoriesView.showEmptyView()
+    }
+}
+
+extension ListRespositoriesController: ErrorViewDelegate {
+    
+    func tryAgain() {
+        listRepositoriesPresenter.fetchRepositories(from: repositoriesService)
     }
 }
