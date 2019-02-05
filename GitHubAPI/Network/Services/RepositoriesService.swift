@@ -9,10 +9,16 @@
 import Foundation
 
 protocol RepositoriesService {
-    func fetchRepositories(language: String, sort: String, completion: @escaping (Result<[Repository]>) -> Void)
+    func fetchRepositories(language: String, sort: String, page: Int, completion: @escaping (Result<[Repository]>) -> Void)
 }
 
-public class DefaultRepositoriesService: RepositoriesService {
+extension RepositoriesService {
+    func fetchRepositories(language: String, sort: String, page: Int = 1, completion: @escaping (Result<[Repository]>) -> Void) {
+        fetchRepositories(language: language, sort: sort, page: page, completion: completion)
+    }
+}
+
+public final class DefaultRepositoriesService: RepositoriesService {
     
     private let apiClient: APIClient
     
@@ -20,8 +26,8 @@ public class DefaultRepositoriesService: RepositoriesService {
         self.apiClient = apiClient
     }
     
-    func fetchRepositories(language: String, sort: String, completion: @escaping (Result<[Repository]>) -> Void) {
-        let endpoint = RepositoriesEndpoint(language: language, sort: sort)
+    func fetchRepositories(language: String, sort: String, page: Int, completion: @escaping (Result<[Repository]>) -> Void) {
+        let endpoint = RepositoriesEndpoint(language: language, sort: sort, page: page)
         
         apiClient.request(endpoint) { result in
             switch result {

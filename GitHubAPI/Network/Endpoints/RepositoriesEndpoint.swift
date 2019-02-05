@@ -22,8 +22,8 @@ class RepositoriesEndpoint: Endpoint {
        .url
     }()
     
-    init(language: String, sort: String) {
-        path = "/search/repositories?q=language:\(language)&sort=\(sort)"
+    init(language: String, sort: String, page: Int) {
+        path = "/search/repositories?q=language:\(language)&sort=\(sort)&page=\(page)"
         path = path.removingPercentEncoding ?? ""
     }
     

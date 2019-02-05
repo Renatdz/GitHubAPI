@@ -1,2 +1,3 @@
 github "Alamofire/Alamofire" ~> 4.7
 github "AliSoftware/Reusable" ~> 4.0.2
+github "pronebird/UIScrollView-InfiniteScroll" ~> 1.1.0

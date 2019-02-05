@@ -8,15 +8,18 @@
 
 import UIKit
 import Reusable
+import UIScrollView_InfiniteScroll
 
 protocol ListRepositoriesViewDelegate: class {
     func pullToRefresh()
+    func fetchNewRepositories()
 }
 
 final class ListRepositoriesView: UIView {
     
     private var listDataSource: ListRepositoriesDataSource = ListRepositoriesDataSource()
     private var isPullToRefreshCalled: Bool = false
+    private var isInfiniteRefreshCalled: Bool = false
     private weak var tryAgainDelegate: ErrorViewDelegate?
     public weak var delegate: ListRepositoriesViewDelegate?
     
@@ -54,6 +57,7 @@ final class ListRepositoriesView: UIView {
         self.tryAgainDelegate = tryAgainDelegate
         
         buildCodableView()
+        addInfiniteScroll()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -65,6 +69,8 @@ extension ListRepositoriesView {
     
     func show(repositories: [Repository]) {
         if isPullToRefreshCalled {
+            isPullToRefreshCalled = false
+            isInfiniteRefreshCalled = false
             listDataSource.clear()
         }
         
@@ -75,7 +81,7 @@ extension ListRepositoriesView {
     }
     
     func showLoading() {
-        guard !isPullToRefreshCalled else {
+        if isPullToRefreshCalled || isInfiniteRefreshCalled {
             return
         }
         
@@ -100,12 +106,30 @@ extension ListRepositoriesView {
         errorView.set(message: message)
         errorView.isHidden = false
         tableView.isHidden = true
+        isPullToRefreshCalled = false
+        isInfiniteRefreshCalled = false
     }
     
     @objc
     func pullToRefresh() {
         isPullToRefreshCalled = true
         delegate?.pullToRefresh()
+    }
+}
+
+extension ListRepositoriesView {
+    
+    func addInfiniteScroll() {
+        tableView.addInfiniteScroll { [weak self] tableView in
+            self?.isInfiniteRefreshCalled = true
+            self?.delegate?.fetchNewRepositories()
+            
+            tableView.finishInfiniteScroll()
+        }
+        
+        tableView.setShouldShowInfiniteScrollHandler { _ -> Bool in
+            return true
+        }
     }
 }
 

@@ -75,6 +75,10 @@ extension ListRespositoriesController: ListRepositoriesViewDelegate {
     func pullToRefresh() {
         listRepositoriesPresenter.fetchRepositories(from: repositoriesService)
     }
+    
+    func fetchNewRepositories() {
+        listRepositoriesPresenter.fetchRepositoriesWithPagination(from: repositoriesService)
+    }
 }
 
 extension ListRespositoriesController: ErrorViewDelegate {

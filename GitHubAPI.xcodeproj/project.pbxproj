@@ -40,6 +40,7 @@
 		A5A0CE3F2208E0960087F634 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE3E2208E0960087F634 /* RepositoryCell.swift */; };
 		A5A0CE412208E3F00087F634 /* Reusable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE402208E3F00087F634 /* Reusable.framework */; };
 		A5A0CE432209C5350087F634 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE422209C5350087F634 /* ErrorView.swift */; };
+		A5A0CE45220A0EC50087F634 /* UIScrollView_InfiniteScroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A0CE44220A0EC50087F634 /* UIScrollView_InfiniteScroll.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		A5A0CE3E2208E0960087F634 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		A5A0CE402208E3F00087F634 /* Reusable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reusable.framework; path = Carthage/Build/iOS/Reusable.framework; sourceTree = "<group>"; };
 		A5A0CE422209C5350087F634 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		A5A0CE44220A0EC50087F634 /* UIScrollView_InfiniteScroll.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIScrollView_InfiniteScroll.framework; path = Carthage/Build/iOS/UIScrollView_InfiniteScroll.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A0CE45220A0EC50087F634 /* UIScrollView_InfiniteScroll.framework in Frameworks */,
 				A5A0CE412208E3F00087F634 /* Reusable.framework in Frameworks */,
 				A5A0CE2E2204DDC40087F634 /* Alamofire.framework in Frameworks */,
 			);
@@ -278,6 +281,7 @@
 		A5A0CE2C2204DDC40087F634 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5A0CE44220A0EC50087F634 /* UIScrollView_InfiniteScroll.framework */,
 				A5A0CE402208E3F00087F634 /* Reusable.framework */,
 				A5A0CE2D2204DDC40087F634 /* Alamofire.framework */,
 			);
@@ -430,6 +434,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Reusable.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/UIScrollView_InfiniteScroll.framework",
 			);
 			name = "Carthage copy";
 			outputFileListPaths = (
@@ -437,6 +442,7 @@
 			outputPaths = (
 				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Reusable.framework",
+				"$(BUILD_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/UIScrollView_InfiniteScroll.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
