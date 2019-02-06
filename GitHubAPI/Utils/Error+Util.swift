@@ -27,17 +27,4 @@ public enum GenericError: PrintableError {
             return "Ocorreu um erro inesperado.\nPor favor, tente novamente."
         }
     }
-
-    public var title: String {
-        return "Erro"
-    }
-
-    public var imageName: String {
-        switch self {
-        case .noConnection:
-            return "error_no_connection"
-        default:
-            return "error_unknown"
-        }
-    }
 }

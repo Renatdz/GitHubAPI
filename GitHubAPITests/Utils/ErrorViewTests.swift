@@ -16,6 +16,7 @@ import Nimble_Snapshots
 class ErrorViewTests: QuickSpec {
 
     override func spec() {
+
         describe("ErrorViewTests") {
 
             var sut: ErrorView!

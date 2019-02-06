@@ -7,7 +7,5 @@
 //
 
 public protocol PrintableError: Error {
-    var title: String { get }
-    var imageName: String { get }
     var localizedDescription: String { get }
 }
