@@ -15,8 +15,6 @@ struct Repository: Codable {
     private(set) var fullName: String
     private(set) var owner: Owner
     private(set) var stars: Int
-    private(set) var watchers: Int
-    private(set) var forks: Int
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -24,17 +22,13 @@ struct Repository: Codable {
         case fullName = "full_name"
         case owner
         case stars = "stargazers_count"
-        case watchers = "watchers_count"
-        case forks
     }
 
-    init(id: Int, name: String, fullName: String, owner: Owner, stars: Int, watchers: Int, forks: Int) {
+    init(id: Int, name: String, fullName: String, owner: Owner, stars: Int) {
         self.id = id
         self.name = name
         self.fullName = fullName
         self.owner = owner
         self.stars = stars
-        self.watchers = watchers
-        self.forks = forks
     }
 }
