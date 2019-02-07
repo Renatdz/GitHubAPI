@@ -1,13 +1,6 @@
 # GitHubAPI
 This is a learning repository to apply all my studies
 
-* ## Index
-	* ### [Appearance](#appearance) 
-        * ### [Installation](#installation)
-        * ### [Tests & Coverage](#tests-&-coverage)
-        * ### [Libs](#libs) 
-        * ### [Comments](#comments)
-
 
 ## Appearance
 
