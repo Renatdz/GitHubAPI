@@ -28,7 +28,7 @@ final class ListRespositoriesPresenter {
                 guard !repositories.isEmpty else {
                     self.listRepositoriesView?.showEmptyView(); return
                 }
-                self.page = 1
+                self.page = 2
                 self.listRepositoriesView?.set(repositories)
 
             case let .failure(error):
