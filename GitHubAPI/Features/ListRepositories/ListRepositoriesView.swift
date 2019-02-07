@@ -99,7 +99,7 @@ extension ListRepositoriesView {
     }
 
     func showEmptyView() {
-        errorView.set(message: "Não achamos resultados")
+        errorView.set(message: "We cannot find results")
         tableView.finishInfiniteScroll()
         errorView.isHidden = false
         tableView.isHidden = true

@@ -48,7 +48,7 @@ final class ListRepositoriesControllerTests: QuickSpec {
                 }
 
                 it("should have the right title") {
-                    expect(sut.title) == "Repositórios"
+                    expect(sut.title) == "Repositories"
                 }
             }
 

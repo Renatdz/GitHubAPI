@@ -38,7 +38,7 @@ extension ListRepositoriesController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Repositórios"
+        title = "Repositories"
 
         listRepositoriesPresenter.setView(self)
         listRepositoriesPresenter.fetchRepositories(from: repositoriesService)

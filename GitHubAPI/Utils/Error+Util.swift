@@ -15,16 +15,16 @@ public enum GenericError: PrintableError {
     public var localizedDescription: String {
         switch self {
         case .parse:
-            return "Erro de sintaxe"
+            return "Syntax error"
 
         case .noConnection:
-            return "Parece que você está sem internet.\nVerifique sua conexão."
+            return "It looks like you don't have connection.\nVerify your internet."
 
         case .networking:
-            return "Erro de conexão"
+            return "Connection error"
 
         case .unknown:
-            return "Ocorreu um erro inesperado.\nPor favor, tente novamente."
+            return "An unexpected error occurred.\nPlease, try again."
         }
     }
 }

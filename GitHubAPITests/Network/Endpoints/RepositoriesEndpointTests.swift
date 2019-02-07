@@ -26,6 +26,7 @@ final class RepositoriesEndpointTests: QuickSpec {
             }
 
             context("when instantiated") {
+                
                 it("should return right values") {
                     expect(sut.method) == MethodHTTP.get
                     expect(sut.parameterEncoding) == ParameterEncoding.url
@@ -33,9 +34,11 @@ final class RepositoriesEndpointTests: QuickSpec {
             }
 
             context("When errorMessage is called") {
+                
                 context("When status code is mapped") {
+                    
                     it("Should return message properly") {
-                        expect(sut.errorMessage(with: 404)!.localizedDescription).to(equal("Erro de conexão"))
+                        expect(sut.errorMessage(with: 404)!.localizedDescription).to(equal("Connection error"))
                     }
                 }
             }

@@ -29,7 +29,7 @@ public final class ErrorView: UIView {
     private lazy var tryAgain: UIButton = {
         let button = UIButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Tente novamente", for: .normal)
+        button.setTitle("Try again", for: .normal)
         button.setTitleColor(UIColor(red: 0.0, green: 0.4, blue: 1.0, alpha: 1.0), for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         button.addTarget(self, action: #selector(didTouchTryAgainButton), for: .touchUpInside)
