@@ -13,7 +13,7 @@ import Nimble
 
 @testable import GitHubAPI
 
-class RepositoriesEndpointTests: QuickSpec {
+final class RepositoriesEndpointTests: QuickSpec {
 
     override func spec() {
 

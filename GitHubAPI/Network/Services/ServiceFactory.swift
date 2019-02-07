@@ -10,7 +10,7 @@ protocol ServiceFactory {
     func getRepositoriesService() -> RepositoriesService
 }
 
-public class APIServiceFactory: ServiceFactory {
+public final class APIServiceFactory: ServiceFactory {
 
     private let apiClient: APIClient
 

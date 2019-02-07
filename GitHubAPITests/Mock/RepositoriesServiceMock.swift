@@ -9,7 +9,7 @@
 import Foundation
 @testable import GitHubAPI
 
-class RepositoriesServiceMock: RepositoriesService {
+final class RepositoriesServiceMock: RepositoriesService {
 
     var result: Result<[Repository]>
 

@@ -13,7 +13,7 @@ import Nimble
 import Nimble_Snapshots
 @testable import GitHubAPI
 
-class ErrorViewTests: QuickSpec {
+final class ErrorViewTests: QuickSpec {
 
     override func spec() {
 

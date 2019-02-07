@@ -13,7 +13,7 @@ import Nimble
 
 @testable import GitHubAPI
 
-class ErrorHandlerTests: QuickSpec {
+final class ErrorHandlerTests: QuickSpec {
 
     override func spec() {
 

@@ -13,7 +13,7 @@ import Nimble
 
 @testable import GitHubAPI
 
-class ConnectableAPIClientTests: QuickSpec {
+final class ConnectableAPIClientTests: QuickSpec {
 
     override func spec() {
 

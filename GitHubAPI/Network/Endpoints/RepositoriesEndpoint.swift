@@ -6,7 +6,7 @@
 //  Copyright © 2019 Renato Mendes. All rights reserved.
 //
 
-class RepositoriesEndpoint: Endpoint {
+final class RepositoriesEndpoint: Endpoint {
 
     var method: MethodHTTP = {
        .get

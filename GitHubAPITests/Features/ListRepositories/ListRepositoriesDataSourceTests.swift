@@ -12,7 +12,7 @@ import Quick
 import Nimble
 @testable import GitHubAPI
 
-class ListRepositoriesDataSourceTests: QuickSpec {
+final class ListRepositoriesDataSourceTests: QuickSpec {
 
     override func spec() {
 

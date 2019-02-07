@@ -9,7 +9,7 @@
 import Foundation
 @testable import GitHubAPI
 
-class ErrorHandlerMock: ErrorHandler {
+final class ErrorHandlerMock: ErrorHandler {
 
     var isHandleCalled = false
     var statusCode: Int?

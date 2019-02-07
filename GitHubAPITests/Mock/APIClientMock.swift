@@ -11,7 +11,7 @@
 import Foundation
 @testable import GitHubAPI
 
-class APIClientMock: APIClient {
+final class APIClientMock: APIClient {
 
     var isRequestCalled = false
     var result: Result<Data>?
@@ -26,7 +26,7 @@ class APIClientMock: APIClient {
     }
 }
 
-class APIClientRepositoriesMock: APIClient {
+final class APIClientRepositoriesMock: APIClient {
     var isRequestCalled = false
     var endpoints: [Endpoint] = []
     var callsCount = 1

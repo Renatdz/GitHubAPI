@@ -8,7 +8,7 @@
 
 @testable import GitHubAPI
 
-class ConnectableMock: Connectable {
+final class ConnectableMock: Connectable {
 
     var isConnectedToInternetResponse = false
 
