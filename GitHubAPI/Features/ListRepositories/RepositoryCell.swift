@@ -59,7 +59,7 @@ final class RepositoryCell: UITableViewCell {
 extension RepositoryCell {
 
     func setup(with repository: Repository) {
-        author.text = repository.owner.name.capitalized
+        author.text = repository.getOwnersName()
 
         repoName.text = repository.name.capitalized
 
@@ -67,7 +67,7 @@ extension RepositoryCell {
 
         buildCodableView()
 
-        guard let url = URL(string: repository.owner.avatar) else { return }
+        guard let url = URL(string: repository.getOwnersAvatar()) else { return }
         avatar.kf.setImage(with: url)
     }
 }
@@ -110,6 +110,6 @@ extension RepositoryCell: CodableView {
     }
 
     func setup() {
-
+        backgroundColor = .white
     }
 }

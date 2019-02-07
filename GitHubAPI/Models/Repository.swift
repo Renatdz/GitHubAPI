@@ -31,4 +31,12 @@ struct Repository: Codable {
         self.owner = owner
         self.stars = stars
     }
+
+    func getOwnersAvatar() -> String {
+        return owner.avatar
+    }
+
+    func getOwnersName() -> String {
+        return owner.name.capitalized
+    }
 }

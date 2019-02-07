@@ -26,8 +26,4 @@ final class RepositoriesEndpoint: Endpoint {
         path = "/search/repositories?q=language:\(language)&sort=\(sort)&page=\(page)"
         path = path.removingPercentEncoding ?? ""
     }
-
-    func errorMessage(with statusCode: Int) -> PrintableError? {
-        return GenericError.networking(statusCode)
-    }
 }

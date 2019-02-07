@@ -6,7 +6,7 @@
 //  Copyright © 2019 Renato Mendes. All rights reserved.
 //
 
-// swiftlint:disable implicitly_unwrapped_optional force_unwrapping
+// swiftlint:disable implicitly_unwrapped_optional
 
 import Quick
 import Nimble
@@ -26,20 +26,10 @@ final class RepositoriesEndpointTests: QuickSpec {
             }
 
             context("when instantiated") {
-                
+
                 it("should return right values") {
                     expect(sut.method) == MethodHTTP.get
                     expect(sut.parameterEncoding) == ParameterEncoding.url
-                }
-            }
-
-            context("When errorMessage is called") {
-                
-                context("When status code is mapped") {
-                    
-                    it("Should return message properly") {
-                        expect(sut.errorMessage(with: 404)!.localizedDescription).to(equal("Connection error"))
-                    }
                 }
             }
         }

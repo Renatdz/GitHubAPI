@@ -12,12 +12,6 @@ protocol RepositoriesService {
     func fetchRepositories(language: String, sort: String, page: Int, completion: @escaping (Result<[Repository]>) -> Void)
 }
 
-extension RepositoriesService {
-    func fetchRepositories(language: String, sort: String, page: Int = 1, completion: @escaping (Result<[Repository]>) -> Void) {
-        fetchRepositories(language: language, sort: sort, page: page, completion: completion)
-    }
-}
-
 public final class DefaultRepositoriesService: RepositoriesService {
 
     private let apiClient: APIClient

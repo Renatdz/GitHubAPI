@@ -18,23 +18,8 @@ final class ListRespositoriesPresenter {
     }
 
     func fetchRepositories(from service: RepositoriesService) {
-        listRepositoriesView?.showLoading()
-
-        service.fetchRepositories(language: "swift", sort: "stars") { [unowned self] result in
-            self.listRepositoriesView?.hideLoading()
-
-            switch result {
-            case let .success(repositories):
-                guard !repositories.isEmpty else {
-                    self.listRepositoriesView?.showEmptyView(); return
-                }
-                self.page = 2
-                self.listRepositoriesView?.set(repositories)
-
-            case let .failure(error):
-                self.listRepositoriesView?.showError(message: error.localizedDescription)
-            }
-        }
+        page = 1
+        fetchRepositoriesWithPagination(from: service)
     }
 
     func fetchRepositoriesWithPagination(from service: RepositoriesService) {

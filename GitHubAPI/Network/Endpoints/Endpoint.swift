@@ -30,3 +30,10 @@ protocol Endpoint {
 
     func errorMessage(with statusCode: Int) -> PrintableError?
 }
+
+extension Endpoint {
+
+    func errorMessage(with statusCode: Int) -> PrintableError? {
+        return nil
+    }
+}
