@@ -2,11 +2,11 @@
 This is a learning repository to apply all my studies
 
 * ## Index
-	* ### Appearance 
-  * ### Installation
-  * ### Tests & Coverage
-  * ### Libs 
-  * ### Comments
+	* ### [Appearance](#appearance) 
+        * ### [Installation](#installation)
+        * ### [Tests & Coverage](#tests-&-coverage)
+        * ### [Libs](#libs) 
+        * ### [Comments](#comments)
 
 
 ## Appearance
