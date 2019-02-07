@@ -1,0 +1,9 @@
+scheme("GitHubAPI")
+
+clean(true)
+
+skip_build(true)
+
+devices(["iPhone SE (12.1)"])
+
+code_coverage(true)
