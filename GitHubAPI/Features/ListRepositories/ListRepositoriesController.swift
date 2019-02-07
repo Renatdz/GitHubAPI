@@ -8,11 +8,11 @@
 
 import UIKit
 
-final class ListRespositoriesController: UIViewController {
+final class ListRepositoriesController: UIViewController {
 
     private var listRepositoriesView: ListRepositoriesView = ListRepositoriesView()
     private let repositoriesService: RepositoriesService
-    private let listRepositoriesPresenter: ListRespositoriesPresenter
+    private(set) var listRepositoriesPresenter: ListRespositoriesPresenter
 
     init(service: RepositoriesService, presenter: ListRespositoriesPresenter = ListRespositoriesPresenter()) {
         repositoriesService = service
@@ -23,11 +23,11 @@ final class ListRespositoriesController: UIViewController {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
 }
 
-extension ListRespositoriesController {
+extension ListRepositoriesController {
 
     override func loadView() {
         listRepositoriesView = ListRepositoriesView(tryAgainDelegate: self)
@@ -45,7 +45,7 @@ extension ListRespositoriesController {
     }
 }
 
-extension ListRespositoriesController: ListRepositoriesViewProtocol {
+extension ListRepositoriesController: ListRepositoriesViewProtocol {
 
     func showLoading() {
         listRepositoriesView.showLoading()
@@ -68,7 +68,7 @@ extension ListRespositoriesController: ListRepositoriesViewProtocol {
     }
 }
 
-extension ListRespositoriesController: ListRepositoriesViewDelegate {
+extension ListRepositoriesController: ListRepositoriesViewDelegate {
 
     func pullToRefresh() {
         listRepositoriesPresenter.fetchRepositories(from: repositoriesService)
@@ -79,7 +79,7 @@ extension ListRespositoriesController: ListRepositoriesViewDelegate {
     }
 }
 
-extension ListRespositoriesController: ErrorViewDelegate {
+extension ListRepositoriesController: ErrorViewDelegate {
 
     func tryAgain() {
         listRepositoriesPresenter.fetchRepositories(from: repositoriesService)

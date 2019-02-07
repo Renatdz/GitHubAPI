@@ -19,7 +19,7 @@ final class RepositoriesCoordinator: Coordinator {
     }
 
     func start() {
-        let listRepositoriesController = ListRespositoriesController(service: service)
+        let listRepositoriesController = ListRepositoriesController(service: service)
         navigationController.pushViewController(listRepositoriesController, animated: true)
     }
 }

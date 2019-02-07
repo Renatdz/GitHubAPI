@@ -20,19 +20,19 @@ final class ListRespositoriesPresenter {
     func fetchRepositories(from service: RepositoriesService) {
         listRepositoriesView?.showLoading()
 
-        service.fetchRepositories(language: "swift", sort: "stars") { [weak self] result in
-            self?.listRepositoriesView?.hideLoading()
+        service.fetchRepositories(language: "swift", sort: "stars") { [unowned self] result in
+            self.listRepositoriesView?.hideLoading()
 
             switch result {
             case let .success(repositories):
                 guard !repositories.isEmpty else {
-                    self?.listRepositoriesView?.showEmptyView(); return
+                    self.listRepositoriesView?.showEmptyView(); return
                 }
-
-                self?.listRepositoriesView?.set(repositories)
+                self.page = 1
+                self.listRepositoriesView?.set(repositories)
 
             case let .failure(error):
-                self?.listRepositoriesView?.showError(message: error.localizedDescription)
+                self.listRepositoriesView?.showError(message: error.localizedDescription)
             }
         }
     }

@@ -56,6 +56,12 @@
 		A5A0CE6D220B780C0087F634 /* ServiceFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE6C220B780C0087F634 /* ServiceFactoryTests.swift */; };
 		A5A0CE6F220B78DE0087F634 /* RepositoriesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE6E220B78DE0087F634 /* RepositoriesServiceTests.swift */; };
 		A5A0CE71220B7A270087F634 /* RepositoriesEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE70220B7A270087F634 /* RepositoriesEndpointTests.swift */; };
+		A5A0CE75220B7D340087F634 /* ListRepositoriesViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE74220B7D340087F634 /* ListRepositoriesViewTests.swift */; };
+		A5A0CE77220C6B560087F634 /* RepositoryCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE76220C6B560087F634 /* RepositoryCellTests.swift */; };
+		A5A0CE79220C6F870087F634 /* ListRepositoriesDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE78220C6F870087F634 /* ListRepositoriesDataSourceTests.swift */; };
+		A5A0CE7B220C762C0087F634 /* ListRepositoriesControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE7A220C762C0087F634 /* ListRepositoriesControllerTests.swift */; };
+		A5A0CE7D220C8A7D0087F634 /* RepositoriesServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE7C220C8A7D0087F634 /* RepositoriesServiceMock.swift */; };
+		A5A0CE81220C90290087F634 /* ListRepositoriesViewProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A0CE80220C90290087F634 /* ListRepositoriesViewProtocolMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +129,12 @@
 		A5A0CE6C220B780C0087F634 /* ServiceFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactoryTests.swift; sourceTree = "<group>"; };
 		A5A0CE6E220B78DE0087F634 /* RepositoriesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesServiceTests.swift; sourceTree = "<group>"; };
 		A5A0CE70220B7A270087F634 /* RepositoriesEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesEndpointTests.swift; sourceTree = "<group>"; };
+		A5A0CE74220B7D340087F634 /* ListRepositoriesViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositoriesViewTests.swift; sourceTree = "<group>"; };
+		A5A0CE76220C6B560087F634 /* RepositoryCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellTests.swift; sourceTree = "<group>"; };
+		A5A0CE78220C6F870087F634 /* ListRepositoriesDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositoriesDataSourceTests.swift; sourceTree = "<group>"; };
+		A5A0CE7A220C762C0087F634 /* ListRepositoriesControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositoriesControllerTests.swift; sourceTree = "<group>"; };
+		A5A0CE7C220C8A7D0087F634 /* RepositoriesServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesServiceMock.swift; sourceTree = "<group>"; };
+		A5A0CE80220C90290087F634 /* ListRepositoriesViewProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepositoriesViewProtocolMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +201,7 @@
 		A559587C22021DE9009EB57C /* GitHubAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				A5A0CE72220B7D180087F634 /* Features */,
 				A5A0CE59220B46060087F634 /* Network */,
 				A5A0CE56220B409B0087F634 /* Utils */,
 				A5A0CE5D220B48300087F634 /* Mock */,
@@ -351,6 +364,8 @@
 				A5A0CE66220B76370087F634 /* ConnectableMock.swift */,
 				A5A0CE62220B498C0087F634 /* ErrorHandlerMock.swift */,
 				A5A0CE5E220B48440087F634 /* RepositoryResultMock.swift */,
+				A5A0CE7C220C8A7D0087F634 /* RepositoriesServiceMock.swift */,
+				A5A0CE80220C90290087F634 /* ListRepositoriesViewProtocolMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -370,6 +385,25 @@
 				A5A0CE6E220B78DE0087F634 /* RepositoriesServiceTests.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A5A0CE72220B7D180087F634 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				A5A0CE73220B7D240087F634 /* ListRepositories */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A5A0CE73220B7D240087F634 /* ListRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				A5A0CE74220B7D340087F634 /* ListRepositoriesViewTests.swift */,
+				A5A0CE76220C6B560087F634 /* RepositoryCellTests.swift */,
+				A5A0CE78220C6F870087F634 /* ListRepositoriesDataSourceTests.swift */,
+				A5A0CE7A220C762C0087F634 /* ListRepositoriesControllerTests.swift */,
+			);
+			path = ListRepositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -585,14 +619,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A0CE77220C6B560087F634 /* RepositoryCellTests.swift in Sources */,
+				A5A0CE75220B7D340087F634 /* ListRepositoriesViewTests.swift in Sources */,
 				A5A0CE67220B76370087F634 /* ConnectableMock.swift in Sources */,
+				A5A0CE7B220C762C0087F634 /* ListRepositoriesControllerTests.swift in Sources */,
 				A5A0CE65220B75B10087F634 /* ConnectableAPIClientTests.swift in Sources */,
 				A5A0CE5C220B469A0087F634 /* ErrorHandlerAPIClientTests.swift in Sources */,
+				A5A0CE81220C90290087F634 /* ListRepositoriesViewProtocolMock.swift in Sources */,
 				A5A0CE71220B7A270087F634 /* RepositoriesEndpointTests.swift in Sources */,
 				A5A0CE61220B49620087F634 /* APIClientMock.swift in Sources */,
 				A5A0CE58220B40C20087F634 /* ErrorViewTests.swift in Sources */,
 				A5A0CE69220B76DE0087F634 /* ErrorHandlerTests.swift in Sources */,
 				A5A0CE5F220B48440087F634 /* RepositoryResultMock.swift in Sources */,
+				A5A0CE7D220C8A7D0087F634 /* RepositoriesServiceMock.swift in Sources */,
+				A5A0CE79220C6F870087F634 /* ListRepositoriesDataSourceTests.swift in Sources */,
 				A5A0CE63220B498C0087F634 /* ErrorHandlerMock.swift in Sources */,
 				A5A0CE6D220B780C0087F634 /* ServiceFactoryTests.swift in Sources */,
 				A5A0CE6F220B78DE0087F634 /* RepositoriesServiceTests.swift in Sources */,
