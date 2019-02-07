@@ -77,6 +77,7 @@ extension ListRepositoriesView {
 
         listDataSource.set(repositories)
         tableView.reloadData()
+        tableView.finishInfiniteScroll()
         tableView.isHidden = false
         errorView.isHidden = true
     }
@@ -99,6 +100,7 @@ extension ListRepositoriesView {
 
     func showEmptyView() {
         errorView.set(message: "Não achamos resultados")
+        tableView.finishInfiniteScroll()
         errorView.isHidden = false
         tableView.isHidden = true
     }
@@ -108,10 +110,12 @@ extension ListRepositoriesView {
             isPullToRefreshCalled = false
             isInfiniteRefreshCalled = false
             makeToast(message)
+            tableView.finishInfiniteScroll()
             return
         }
 
         errorView.set(message: message)
+        tableView.finishInfiniteScroll()
         errorView.isHidden = false
         tableView.isHidden = true
     }
@@ -126,11 +130,9 @@ extension ListRepositoriesView {
 extension ListRepositoriesView {
 
     func addInfiniteScroll() {
-        tableView.addInfiniteScroll { [weak self] tableView in
+        tableView.addInfiniteScroll { [weak self] _ in
             self?.isInfiniteRefreshCalled = true
             self?.delegate?.fetchNewRepositories()
-
-            tableView.finishInfiniteScroll()
         }
 
         tableView.setShouldShowInfiniteScrollHandler { _ -> Bool in
